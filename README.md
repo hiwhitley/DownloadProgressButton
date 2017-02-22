@@ -38,9 +38,9 @@ the Customized properties are in the follow table:
 
 - STYLE_BALL_PULSE
 
-![STYLE_BALL_PULSE](http://ww1.sinaimg.cn/large/8e985f95gy1fczk9mvv8zg203m01idgg)
+  ![STYLE_BALL_PULSE](http://ww1.sinaimg.cn/large/8e985f95gy1fczk9mvv8zg203m01idgg)
 
-- [STYLE_BALL_JUMP]()
+- STYLE_BALL_JUMP
 
   ![STYLE_BALL_JUMP](http://ww1.sinaimg.cn/large/8e985f95gy1fczk9mtb38g203s022wfa)
 
@@ -48,7 +48,7 @@ the Customized properties are in the follow table:
 
  ![](http://ww1.sinaimg.cn/mw690/8e985f95gy1fczjrgbxndj20s90g7mzv)
 
-# Thanks
+## Thanks
 
 [**AVLoadingIndicatorView**](https://github.com/81813780/AVLoadingIndicatorView)
 
