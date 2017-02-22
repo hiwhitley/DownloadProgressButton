@@ -38,7 +38,7 @@ the Customized properties are in the follow table:
 
  The follow picture make a clear explanation:
 
- ![](http://ww1.sinaimg.cn/mw690/8e985f95gy1fczjrgbxndj20s90g7mzv)v)
+ ![](http://ww1.sinaimg.cn/mw690/8e985f95gy1fczjrgbxndj20s90g7mzv)
 
 ## License
 
