@@ -2,7 +2,7 @@
 <resources>
 
     <declare-styleable name="DownloadProgressButton">
-        <attr name="progress_btn_radius" format="float" />
+        <attr name="progress_btn_radius" format="dimension" />
         <attr name="progress_btn_background_color" format="color" />
         <attr name="progress_btn_background_second_color" format="color" />
         <attr name="progress_btn_text_color" format="color" />

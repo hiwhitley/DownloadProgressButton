@@ -112,7 +112,7 @@ public class DownloadProgressButton extends TextView {
         try {
             mBackgroundColor = a.getColor(R.styleable.DownloadProgressButton_progress_btn_background_color, Color.parseColor("#3385FF"));
             mBackgroundSecondColor = a.getColor(R.styleable.DownloadProgressButton_progress_btn_background_second_color, Color.parseColor("#E8E8E8"));
-            mButtonRadius = a.getFloat(R.styleable.DownloadProgressButton_progress_btn_radius, 0);
+            mButtonRadius = a.getDimension(R.styleable.DownloadProgressButton_progress_btn_radius, 0);
             mTextColor = a.getColor(R.styleable.DownloadProgressButton_progress_btn_text_color, mBackgroundColor);
             mTextCoverColor = a.getColor(R.styleable.DownloadProgressButton_progress_btn_text_cover_color, Color.WHITE);
             mBorderWidth = a.getDimension(R.styleable.DownloadProgressButton_progress_btn_border_width, dp2px(2));

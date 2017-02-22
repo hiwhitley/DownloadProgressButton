@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         if (mDownloadProgressButton.getState() == DownloadProgressButton.STATE_NORMAL
                 || mDownloadProgressButton.getState() == DownloadProgressButton.STATE_PAUSE) {
             mDownloadProgressButton.setState(DownloadProgressButton.STATE_DOWNLOADING);
-            mDownloadProgressButton.setProgressText("下载中", mDownloadProgressButton.getProgress() + 8);
+            mDownloadProgressButton.setProgressText("下载中", mDownloadProgressButton.getProgress() + 50);
             return;
         }
 
