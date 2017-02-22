@@ -26,19 +26,31 @@ you can define the button in xml like this:
 
 the Customized properties are in the follow table:
 
-| Property                             |  Format   |             Default              |
-| ------------------------------------ | :-------: | :------------------------------: |
-| progress_btn_radius                  | dimension |               0dp                |
-| progress_btn_background_color        |   color   |             #3385FF              |
-| progress_btn_background_second_color |   color   |             #E8E8E8              |
-| progress_btn_text_color              |   color   |  progress_btn_background_color   |
-| progress_btn_text_cover_color        |   color   |           Color.WHITE            |
-| progress_btn_border_width            | dimension |               2dp                |
-| progress_btn_ball_style              |   enum    | STYLE_BALL_PULSE，STYLE_BALL_JUMP |
+| Property                             |  Format   |            Default            |
+| ------------------------------------ | :-------: | :---------------------------: |
+| progress_btn_radius                  | dimension |              0dp              |
+| progress_btn_background_color        |   color   |            #3385FF            |
+| progress_btn_background_second_color |   color   |            #E8E8E8            |
+| progress_btn_text_color              |   color   | progress_btn_background_color |
+| progress_btn_text_cover_color        |   color   |          Color.WHITE          |
+| progress_btn_border_width            | dimension |              2dp              |
+| progress_btn_ball_style              |   enum    |       STYLE_BALL_PULSE        |
+
+- STYLE_BALL_PULSE
+
+![STYLE_BALL_PULSE](http://ww1.sinaimg.cn/large/8e985f95gy1fczk9mvv8zg203m01idgg)
+
+- [STYLE_BALL_JUMP]()
+
+  ![STYLE_BALL_JUMP](http://ww1.sinaimg.cn/large/8e985f95gy1fczk9mtb38g203s022wfa)
 
  The follow picture make a clear explanation:
 
  ![](http://ww1.sinaimg.cn/mw690/8e985f95gy1fczjrgbxndj20s90g7mzv)
+
+# Thanks
+
+[**AVLoadingIndicatorView**](https://github.com/81813780/AVLoadingIndicatorView)
 
 ## License
 
