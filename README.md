@@ -34,7 +34,7 @@ the Customized properties are in the follow table:
 | progress_btn_text_color              |   color   | progress_btn_background_color |
 | progress_btn_text_cover_color        |   color   |          Color.WHITE          |
 | progress_btn_border_width            | dimension |              2dp              |
-| progress_btn_ball_style              |   enum    |       STYLE_BALL_PULSE        |
+| progress_btn_ball_style              |   enum    |       STYLE_BALL_JUMP       |
 
 - STYLE_BALL_PULSE
 

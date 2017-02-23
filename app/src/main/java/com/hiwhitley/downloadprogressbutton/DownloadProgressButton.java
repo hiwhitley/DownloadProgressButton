@@ -180,7 +180,7 @@ public class DownloadProgressButton extends TextView {
     private void drawBackground(Canvas canvas) {
 
         mBackgroundBounds = new RectF();
-
+        //根据Border宽度得到Button的显示区域
         mBackgroundBounds.left = showBorder ? mBorderWidth : 0;
         mBackgroundBounds.top = showBorder ? mBorderWidth : 0;
         mBackgroundBounds.right = getMeasuredWidth() - (showBorder ? mBorderWidth : 0);
@@ -201,14 +201,21 @@ public class DownloadProgressButton extends TextView {
                 break;
             case STATE_PAUSE:
             case STATE_DOWNLOADING:
+                //计算当前的进度
                 mProgressPercent = mProgress / (mMaxProgress + 0f);
                 mBackgroundPaint.setColor(mBackgroundSecondColor);
+                canvas.save();
+                //画出dst图层
                 canvas.drawRoundRect(mBackgroundBounds, mButtonRadius, mButtonRadius, mBackgroundPaint);
+                //设置图层显示模式为 SRC_ATOP
                 PorterDuffXfermode porterDuffXfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP);
                 mBackgroundPaint.setColor(mBackgroundColor);
                 mBackgroundPaint.setXfermode(porterDuffXfermode);
+                //计算 src 矩形的右边界
                 float right = mBackgroundBounds.right * mProgressPercent;
+                //在dst画出src矩形
                 canvas.drawRect(mBackgroundBounds.left, mBackgroundBounds.top, right, mBackgroundBounds.bottom, mBackgroundPaint);
+                canvas.restore();
                 mBackgroundPaint.setXfermode(null);
                 break;
             case STATE_FINISH:
@@ -219,11 +226,14 @@ public class DownloadProgressButton extends TextView {
     }
 
     private void drawTextAbove(Canvas canvas) {
+        //计算Baseline绘制的Y坐标
         final float y = canvas.getHeight() / 2 - (mTextPaint.descent() / 2 + mTextPaint.ascent() / 2);
         if (mCurrentText == null) {
             mCurrentText = "";
         }
         final float textWidth = mTextPaint.measureText(mCurrentText.toString());
+        mTextBottomBorder = y;
+        mTextRightBorder = (getMeasuredWidth() + textWidth) / 2;
         //color
         switch (mState) {
             case STATE_NORMAL:
@@ -247,6 +257,7 @@ public class DownloadProgressButton extends TextView {
                     mTextPaint.setShader(null);
                     mTextPaint.setColor(mTextColor);
                 } else if (indicator1 < coverLength && coverLength <= indicator2) {
+                    //设置变色效果
                     mProgressTextGradient = new LinearGradient((getMeasuredWidth() - textWidth) / 2, 0, (getMeasuredWidth() + textWidth) / 2, 0,
                             new int[]{mTextCoverColor, mTextColor},
                             new float[]{textProgress, textProgress + 0.001f},
@@ -260,8 +271,6 @@ public class DownloadProgressButton extends TextView {
                 canvas.drawText(mCurrentText.toString(), (getMeasuredWidth() - textWidth) / 2, y, mTextPaint);
                 break;
             case STATE_FINISH:
-                mTextBottomBorder = y;
-                mTextRightBorder = (getMeasuredWidth() + textWidth) / 2;
                 mTextPaint.setColor(mTextCoverColor);
                 canvas.drawText(mCurrentText.toString(), (getMeasuredWidth() - textWidth) / 2, y, mTextPaint);
                 drawLoadingBall(canvas);
